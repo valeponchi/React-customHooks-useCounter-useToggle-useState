@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AnnoyingAd from '../components/AnnoyingAd'
 import TimeOnPage from '../components/TimeOnPage'
 import Counter from '../components/Counter'
 import useToggle from '../hooks/useToggle'
 
 function CountersPage() {
-	const { boolean: showTimeOnPage, toggle: toggleTimeOnPage } = useToggle()
-	const { boolean: showCounter, toggle: toggleCounter } = useToggle()
-	const { boolean: showAnnoyingAd, toggle: toggleAnnoyingAd } = useToggle()
+	const [showTimeOnPage, toggleTimeOnPage] = useToggle()
+	const [showCounter, toggleCounter] = useToggle()
+	const [showAnnoyingAd, toggleAnnoyingAd] = useToggle()
 
 	return (
 		<main className="countersPage">

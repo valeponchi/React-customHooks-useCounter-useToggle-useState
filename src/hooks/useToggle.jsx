@@ -5,7 +5,7 @@ function useToggle() {
 
 	const toggle = () => setBoolean(boolean => !boolean)
 
-	return { boolean, toggle }
+	return [boolean, toggle]
 }
 
 export default useToggle
