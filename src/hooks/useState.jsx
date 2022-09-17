@@ -7,3 +7,5 @@ function useState(initialValue) {
 	}
 	return [value, functionToSetValue]
 }
+
+// in React, useState would also rerender what needs to be rerendered
