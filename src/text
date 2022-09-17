@@ -1,0 +1,114 @@
+// # Run create-react-app using the latest version:
+
+// npx create-react-app@latest myapp
+// cd myapp
+// npm start
+
+// #React component file extension:
+// src /
+// components/
+// component.js
+// component.jsx
+
+// REACT ROUTER ----------------------------------------------
+
+// ### 1. npm install react-router-dom@6
+
+// ### 2. src/App.js
+
+// export default function App() {
+// return (
+
+// <div>
+// <h1>React Router!</h1>
+// </div>
+// );
+// }
+
+// ### 3. main.jsx/index.js
+
+// import ReactDOM from "react-dom/client";
+// import App from "./App";
+
+// const root = ReactDOM.createRoot(
+// document.getElementById("root")
+// );
+// root.render(<App />);
+
+// ### 4. start the app
+
+// npm start or npm run dev
+
+// ### 5. connect the URL at App.js
+
+// import React from 'react'
+// import { Routes, Route } from 'react-router-dom'
+
+// import Header from './components/Header'
+// import Expenses from './routes/Expenses.jsx'
+// import Invoices from './routes/Invoices.jsx'
+// import Counter from './routes/Counter.jsx'
+// import Homepage from './routes/Homepage.jsx'
+
+// import './App.css'
+
+// function App() {
+// 	return (
+// 		<div className="App">
+// 			<Header />
+
+// 			<Routes>
+// 				<Route path="/" element={<Homepage />} />
+// 				<Route path="expenses" element={<Expenses />} />
+// 				<Route path="invoices" element={<Invoices />} />
+// 				<Route path="counter" element={<Counter />} />
+// 			</Routes>
+// 		</div>
+// 	)
+// }
+
+// export default App
+
+// ### 6.SRC/COMPONENTS/HEADER.JSX add some Link
+// # when you click on the links, the URL would change
+
+// import { Link } from "react-router-dom";
+// function Header() {
+// 	return (
+// 		<header className="App-header">
+// 			<nav className="header__nav">
+// 				<ul>
+// 					<li>
+// 						<Link to="/invoices">Invoices</Link> |{' '}
+// 					</li>
+// 					<li>
+// 						<Link to="/expenses">Expenses</Link> |{' '}
+// 					</li>
+// 					<li>
+// 						<Link to="/counter">Counter</Link> |{' '}
+// 					</li>
+// 				</ul>
+// 			</nav>
+// 		</header>
+// 	)
+// }
+
+// ### 7. add some routes - we create the files to connect to the routes
+
+// src/routes/invoices.jsx
+// src/routes/expenses.jsx
+
+// ### 8. INDEX.JS now we tell React Router how to render our app at different URLs
+
+// import React from 'react'
+// import ReactDOM from 'react-dom/client'
+// import { BrowserRouter } from 'react-router-dom'
+
+// import App from './App'
+
+// const root = ReactDOM.createRoot(document.getElementById('root'))
+// root.render(
+// 	<BrowserRouter>
+// 		<App />
+// 	</BrowserRouter>
+// )
