@@ -1,11 +1,10 @@
 import React from 'react'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import useCount from '../hooks/useCount'
 
 function TimeOnPage() {
-	const [count, setCount] = useState(0)
-
-	const up = () => setCount(count => count + 1)
+	const { count, up } = useCount()
 
 	useEffect(() => {
 		let handleTheInterval = setInterval(up, 1000)

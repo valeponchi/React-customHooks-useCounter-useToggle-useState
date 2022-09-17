@@ -1,8 +1,11 @@
 import React from 'react'
-export default function Documents() {
+
+function Documents() {
 	return (
 		<main>
 			<h2>Documents</h2>
 		</main>
 	)
 }
+
+export default Documents
