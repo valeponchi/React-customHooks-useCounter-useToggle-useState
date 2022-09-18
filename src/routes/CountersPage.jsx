@@ -5,7 +5,7 @@ import Counter from '../components/Counter'
 import useToggle from '../hooks/useToggle'
 
 function CountersPage() {
-	const [showTimeOnPage, toggleTimeOnPage] = useToggle()
+	const [showTimeOnPage, toggleTimeOnPage] = useToggle(false)
 	const [showCounter, toggleCounter] = useToggle()
 	const [showAnnoyingAd, toggleAnnoyingAd] = useToggle()
 
